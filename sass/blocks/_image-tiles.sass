@@ -1,0 +1,47 @@
+.image-tiles
+    &__item
+        padding-left: 45px
+        padding-right: 45px
+        +max-screen(1200px)
+            padding-left: 25px
+            padding-right: 25px
+        +max-screen($breakpoint-md)
+            padding-left: 15px
+            padding-right: 15px
+
+        &__image
+            max-width: 100%
+            width: 100%
+            object-fit: contain
+            height: auto
+    &__heading
+            
+.image-tiles—right
+    justify-content: space-around
+.image-tiles—left
+    justify-content: space-around
+    +max-screen($breakpoint-md)
+        justify-content: space-between
+        .container
+            padding-left: 0
+            padding-right: 0 
+        .image-tiles__item
+            padding-left: 0
+            padding-right: 0
+.threeCols
+    .image-tiles__item—1
+        +max-screen($breakpoint-md)
+            padding: 0
+    .image-tiles__item—3
+         +max-screen($breakpoint-md)
+            display: flex
+            align-self: flex-end
+            justify-content: flex-end
+            padding: 0
+    .image-tiles__item—2
+         +max-screen($breakpoint-md)
+            padding-left: 20px
+            padding-right: 20px
+    .container
+        padding-left: 0
+        padding-right: 0

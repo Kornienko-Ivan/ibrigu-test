@@ -1,0 +1,83 @@
+.button,
+.woocommerce-account.woocommerce-page .woocommerce form .button,
+.btn
+    --webkit-appearence: none
+    position: relative
+    display: inline-block
+    box-sizing: border-box
+    font-size: 14px
+    font-weight: 500
+    line-height: 1em
+    letter-spacing: 0.05em
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    background-color: $color-primary
+    padding: 21px 66px
+    border: 1px solid $color-primary
+    transition: 0.3s ease-out
+    +max-screen($breakpoint-md)
+        font-size: 12px
+        padding: 12px 22px
+    &:hover
+        background-color: #fff
+        color: $color-primary
+    &--white, .text-color-white &, .text-color-white .content-block &
+        background-color: #ffffff
+        color: $color-primary
+        border: 1px solid #ffffff
+        .button__text
+            color: $color-primary
+        &:hover
+            background-color: transparent
+            color: #fff
+            .button__text
+                color: #fff
+    &--black 
+        background-color: $color-black
+        color: $color-white
+        border-color: $color-black
+        &:hover 
+            background-color: transparent
+            color: $color-black
+    &--grey 
+        background-color: $color-bg-grey
+        color: $color-black
+        border-color: $color-bg-grey
+        &:hover 
+            background-color: transparent
+    &--fz--md
+        font-size: 11px
+    &--fz--sm
+        font-size: 9px
+    &--fz--xs 
+        font-size: 8px
+    &--size--md 
+        min-width: 133px
+        padding-top: 9px
+        padding-bottom: 9px
+    &--size--xl
+        min-width: 598px
+        +max-screen($breakpoint-md)
+            min-width: 100%
+    &--underline 
+        text-decoration: underline
+        font-size: 10px
+.buttonsBlock
+    &__inner
+        margin-left: -5px
+        margin-right: -5px
+        display: flex
+        flex-wrap: wrap
+        .buttonsBlock--center &
+            justify-content: center
+        .buttonsBlock--right &
+            justify-content: flex-end
+    .button
+        margin: 5px
+.woocommerce-page .woocommerce-message .button 
+    background-color: $color-black 
+    border-radius: 0
+    color: $color-white
+    font-size: 10px
+    padding: 8px 16px
