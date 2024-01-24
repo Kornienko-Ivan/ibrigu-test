@@ -1,0 +1,506 @@
+.form
+	margin-top: 30px
+	.nf-form-content
+		position: relative
+		padding: 0 !important
+		.nf-field-container
+			margin-bottom: 0 !important
+		.nf-field
+			.field-wrap
+				.nf-field-label
+					padding: 0 !important
+					margin: 0 !important
+				.nf-field-element
+					input, textarea, button
+						font-family: $font-family-base
+						background-color: transparent
+						height: auto
+						+max-screen($breakpoint-md)
+							font-size: 14px
+						+max-screen($breakpoint-sm)
+							font-size: 10px
+						&::placeholder
+							+max-screen($breakpoint-md)
+								font-size: 14px
+							+max-screen($breakpoint-sm)
+								font-size: 10px
+					input, textarea
+						padding: 4px 0
+						color: $color-black
+						&::placeholder
+							color: $color-black
+					textarea
+						border: 1px solid $color-black
+						min-height: 120px
+						padding: 4px 7px
+					input:not([type=checkbox]):not([type=submit])
+						width: 50%
+						border: none
+						border-bottom: 1px solid $color-black
+					input[type=submit]
+						--webkit-appearence: none
+						position: relative
+						display: block
+						box-sizing: border-box
+						width: 100%
+						font-size: 12px
+						font-weight: 500
+						line-height: 1em
+						letter-spacing: 0.05em
+						text-align: center
+						text-transform: uppercase
+						transition: 0.3s ease-out
+						padding: 18px 30px
+						background-color: $color-black
+						color: $color-white
+						border: 1px solid $color-black
+						+max-screen($breakpoint-md)
+							padding: 12px 22px
+						&:hover
+							background-color: transparent
+							color: $color-black
+					&:after
+						display: none !important
+				&.textbox-wrap
+					margin-bottom: 30px
+					&.submit-wrap
+						margin-top: 12px
+						margin-bottom: 0
+				&.email-wrap
+					margin-bottom: 20px
+				&.textarea-wrap
+					margin-bottom: 10px
+				&.checkbox-wrap
+					.nf-field-label
+						label
+							font-weight: 400
+							line-height: 1.8
+							+max-screen($breakpoint-md)
+								margin-left: 20px
+								font-size: 12px
+							+max-screen($breakpoint-sm)
+								margin-left: 16px
+								font-size: 8px
+							&:after
+								background-color: transparent
+								border: 1px solid $color-black
+								+max-screen($breakpoint-md)
+									left: -20px
+									width: 13px
+									height: 13px
+								+max-screen($breakpoint-sm)
+									left: -16px
+									width: 9px
+									height: 9px
+							&:before
+								line-height: 1
+								+max-screen($breakpoint-md)
+									font-size: 13px
+									left: -20px
+								+max-screen($breakpoint-sm)
+									font-size: 9px
+									left: -16px
+	.nf-before-form-content
+		display: none
+	.field-wrap
+		.ninja-forms-req-symbol
+			display: none
+
+.form.form--newsletter
+	margin-top: 0 !important
+	.nf-form-content
+		.nf-field-container
+			&.submit-container
+				position: absolute
+				top: 0
+				right: calc(6.74px * 2)
+				+max-screen($breakpoint-md)
+					right: calc(6.74px * 2)
+				+max-screen($breakpoint-sm)
+					right: calc(7.86px)
+				&:after
+					content: " "
+					position: absolute
+					width: calc(7.86px * 2)
+					height: calc(6.74px * 2)
+					background-image: url(../assets/images/send.svg)
+					background-repeat: no-repeat
+					background-position: center
+					background-size: contain
+					top: 50%
+					left: 0
+					transform: translateY(calc(50% - 4px))
+					+max-screen($breakpoint-sm)
+						width: calc(7.86px)
+						height: calc(6.74px)
+						transform: translateY(calc(50% + 4px))
+		.nf-field
+			.field-wrap
+				.nf-field-element
+					input:not([type=checkbox]):not([type=submit])
+						width: 100%
+					input[type=submit]
+						background: transparent
+						border: none
+						padding: 0
+						font-size: 0
+				&.textbox-wrap
+					&.submit-wrap
+						margin: 0
+				&.email-wrap
+					margin-top: 5px
+				&.checkbox-wrap
+
+//	.nf-field-container
+//		margin-bottom: 40px
+//		+max-screen($breakpoint-md)
+//			margin-bottom: 0
+//	.nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button])
+//		background: none
+//		font-family: $font-family-base
+//		padding: 20px 10px 20px 0
+//		border: none
+//		border-bottom: 1px solid #707070
+//		color: #000
+//		+min-screen($breakpoint-lg)
+//			font-size: 16px
+//		+max-screen($breakpoint-md)
+//			padding: 12px 10px 12px 0
+//			font-size: 12px
+//		+max-screen($breakpoint-sm)
+//			padding: 4px 10px 4px 0
+//			font-size: 9px
+//		&::placeholder
+//			font-weight: 400
+//			color: #000
+//			+min-screen($breakpoint-lg)
+//				font-size: 16px
+//			+max-screen($breakpoint-md)
+//				font-size: 12px
+//			+max-screen($breakpoint-sm)
+//				font-size: 9px
+//	.nf-form-content input[type=submit]
+//		border-bottom: 0 !important
+//		+max-screen($breakpoint-md)
+//			padding: 16px 11px 0 0
+//		+max-screen($breakpoint-sm)
+//			padding: 0 3px 0 0
+//	.nf-form-fields-required
+//		display: none
+//	.checkbox-container
+//		padding-top: 10px
+//	.checkbox-container.label-right label
+//		font-family: $font-family-base
+//		font-weight: 400
+//		font-size: 14px
+//	.checkbox-wrap .nf-field-label label
+//		min-height: 28px
+//		+max-screen($breakpoint-sm)
+//			margin-left: 16px !important
+//	.checkbox-wrap .nf-field-label label:after
+//		width: 20px
+//		height: 20px
+//		border-radius: 2px
+//		border: 1px solid #000
+//		background: transparent
+//		+max-screen($breakpoint-md)
+//			width: 14px
+//			height: 14px
+//		+max-screen($breakpoint-sm)
+//			width: 9.03px
+//			height: 9.03px
+//			left: -16px !important
+//	.checkbox-wrap .nf-field-label label:before
+//		left: -28px !important
+//		font-size: 20px
+//		+max-screen($breakpoint-md)
+//			font-size: 14px
+//		+max-screen($breakpoint-sm)
+//			font-size: 9.03px
+//			left: -16px !important
+//	.nf-error .nf-error-msg
+//		font-size: 12px
+//		position: unset
+//		left: 0
+//		top: 0
+//	.nf-field
+//		.nf-field-label
+//			margin: 0 !important
+//
+//	.submit-wrap
+//		justify-content: center
+//		.nf-field-element
+//			width: fit-content
+//	.nf-error-msg, .ninja-forms-req-symbol
+//		display: none
+//	&--request-demo
+//		+max-screen($breakpoint-md)
+//			max-width: 80%
+//			margin: auto
+//	.nf-error.field-wrap .nf-field-element:after
+//		display: none
+//	.nf-pass.field-wrap .nf-field-element:after
+//		display: none
+//	.nf-response-msg
+//		text-align: center
+//.form--newsletter
+//	nf-fields-wrap
+//		flex-direction: column
+//		nf-field
+//			&:last-child
+//				position: absolute
+//				top: 5px
+//				right: 5px
+//	.nf-form-content
+//		position: relative
+//		padding: 0
+//	.nf-form-content input[type=button]
+//		border: 0
+//		background: none
+//		position: relative
+//	.submit-container
+//		.nf-field-element
+//			&::after
+//				content: " "
+//				position: absolute
+//				width: calc(7.86px * 2)
+//				height: calc(6.74px * 2)
+//				background-image: url(../assets/images/send.svg)
+//				background-repeat: no-repeat
+//				background-position: center
+//				background-size: contain
+//				top: 50%
+//				left: 0
+//				transform: translateY(-50%)
+//				+max-screen($breakpoint-md)
+//					width: calc(7.86px * 2)
+//					height: calc(6.74px * 2)
+//				+max-screen($breakpoint-sm)
+//					width: calc(7.86px)
+//					height: calc(6.74px)
+//	.nf-error.field-wrap .nf-field-element:after
+//		right: -50px
+//		top: 2px
+//		+max-screen($breakpoint-md)
+//			right: 30px
+//	.nf-error-msg, .form .ninja-forms-req-symbol
+//		position: inherit
+//		left: inherit
+//		top: inherit
+//	.nf-error.field-wrap .nf-field-element:after
+//		display: none
+//	.nf-pass.field-wrap .nf-field-element:after
+//		display: none
+//	p
+//		font-size: 18px
+//		+min-screen($breakpoint-lg)
+//			font-size: 16px
+//		+max-screen($breakpoint-md)
+//			font-size: 12px
+//		+max-screen($breakpoint-sm)
+//			font-size: 9px
+//	.checkbox-container.label-right label
+//		font-size: 18px
+//		line-height: 1
+//		+min-screen($breakpoint-lg)
+//			font-size: 16px
+//		+max-screen($breakpoint-md)
+//			font-size: 12px
+//		+max-screen($breakpoint-sm)
+//			font-size: 9px
+//	.nf-error-msg, .form .ninja-forms-req-symbol
+//		display: block
+//		font-size: 12px
+//	.ninja-forms-field
+//		height: auto !important
+
+body.page #main
+	.checkoutContent 
+		form 
+			input 
+				margin-bottom: 23px
+			&.register 
+				display: flex 
+				flex-direction: column 
+				p.email 
+					order: -1
+				input 
+					+max-screen($breakpoint-md)
+						margin-bottom: 16px
+	.woocommerce-shipping-fields__field-wrapper,
+	.woocommerce-billing-fields__field-wrapper
+		.woocommerce-input-wrapper 
+			+min-screen(770px)
+				display: flex 
+	.woocommerce-billing-fields__field-wrapper 
+		display: flex 
+		flex-wrap: wrap
+		.form-row 
+			width: 100%
+		#billing_postcode_field 
+			width: 33%
+		#billing_province_field 
+			margin-left: 6.5px
+			width: calc( 66.6% - 6.5px )
+	.giftComment
+		display: flex 
+	.charactersLimit 
+		margin-top: 36px
+		margin-bottom: 16px
+		line-height: 1
+		+max-screen(1440px)
+			margin-top: 32px
+		+max-screen(1200px)
+			margin-top: 24px
+			margin-bottom: 12px
+		+max-screen($breakpoint-md)
+			margin-top: 20px
+			margin-bottom: 10px	
+		.count 
+			margin-right: 0.4em
+	form
+		#order_comments_field 
+			span
+				height: 185px
+				display: flex
+				align-items: flex-end
+				border: 1.5px solid #000
+				padding: 18px 
+				+max-screen($breakpoint-lg)
+					padding: 12px 
+				+max-screen($breakpoint-md)
+					padding: 8px 9px
+				input 
+					border: 0
+					margin: 0
+					padding: 0
+		.form-row:not(.loginFormButtons)
+			padding: 0
+			margin: 0
+			&#order_comments_field 
+				margin-bottom: 55px
+				+max-screen(1440px)
+					margin-bottom: 42px
+				+max-screen(1200px)
+					margin-bottom: 32px
+				+max-screen($breakpoint-lg)
+					margin-bottom: 24px
+				+max-screen($breakpoint-md)
+					margin-bottom: 28px
+		.form-checkbox
+			margin-bottom: 3px
+			position: relative
+			width: 9px
+			height: 9px
+			margin-right: 8px
+			+max-screen($breakpoint-md)
+				margin-right: 6px
+			input 
+				opacity: 0
+				visibility: hidden
+			&::before 
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				width: 100% 
+				height: 100%
+				border: 1px solid $color-black
+				border-radius: 2px 
+			&::after 
+				content: ""
+				position: absolute
+				transition: .3s 
+				opacity: 0
+				width: 6px
+				height: 4.5px 
+				background-image: url('../assets/images/checkbox-icon.svg')
+				background-size: contain
+				background-repeat: no-repeat
+				left: 2px 
+				bottom: 50%
+				visibility: hidden
+				transform: translateY(50%)
+				+min-screen(770px)
+					width: 5px 
+					border-radius: 1px 
+			&-wrapper
+				display: flex 
+				margin-bottom: 25px
+				align-items: flex-end
+				&.checked
+					.form-checkbox 
+						&::after 
+							opacity: 1
+							visibility: visible
+				&.giftComment
+					margin-bottom: 11px
+				.woocommerce-text 
+					line-height: 1.2
+		.error-msg 
+            display: none
+            margin-bottom: 24px
+            color: $color-red
+            &.show 
+                display: block
+		.woocommerce-form-row
+			padding: 0
+			line-height: 1
+			display: flex 
+			span 
+				width: 100% 
+		input
+			font-size: 15px
+			width: 100%
+			background-color: transparent
+			border: 0
+			border-bottom: 1px solid $color-black
+			padding-right: 12px
+			padding-bottom: 14.5px
+			margin-bottom: 30px
+			color: $color-black
+			+max-screen(1200px)
+				margin-bottom: 24px
+				padding-bottom: 12px
+			+max-screen($breakpoint-lg)
+				font-size: 13px
+				margin-bottom: 20px
+				padding-bottom: 10px
+			+max-screen($breakpoint-md)
+				font-size: 12px
+				padding-left: 1px
+				padding-bottom: 3px
+				margin-bottom: 30px
+			&::placeholder,
+			&:focus
+				color: $color-black
+				opacity: 1
+			& + .show-password-input
+				display: none
+			&.empty 
+				color: $color-red
+				border-color: $color-red
+				&::placeholder
+					color: $color-red
+		textarea 
+			border: 1.5px solid $color-black
+			background-color: transparent
+			height: 185px
+			font-size: 10px
+			padding: 8px 9px 
+		&.spacing-sm 
+			input 
+				margin-bottom: 16px
+		.shipping_address 
+			+max-screen($breakpoint-md)
+				padding-right: 38px
+			.form-row 
+				width: 100%
+			#shipping_postcode_field 
+				width: 33%
+			#shipping_province_field 
+				width: calc( 66.6% - 6.5px )
+				margin-left: 6.5px
+			.woocommerce-shipping-fields__field-wrapper
+				display: flex 
+				flex-wrap: wrap 
