@@ -1,0 +1,172 @@
+html, body
+  -webkit-overflow-scrolling: touch
+
+body
+	font-family: $font-family-base
+	font-size: $default-font-size
+	font-weight: $default-font-weight
+	font-style: normal
+	line-height: calc(1em * 1.8)
+	color: $default-text-color
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-backface-visibility: hidden
+	-webkit-tap-highlight-color: transparent
+	::-moz-selection
+		color: $color-primary
+		background: transparent
+	::selection
+		color: $color-primary
+		background: transparent
+	+max-screen($breakpoint-md)
+		font-size: 16px
+		//line-height: calc(1em * 1.4)
+	+max-screen($breakpoint-sm)
+		font-size: 10px
+		//line-height: calc(1em * 1.8)
+
+h1, .h1
+	font-weight: 400
+	font-size: 63px
+	line-height: 1
+	+max-screen($breakpoint-md)
+		font-size: 34px
+		&.sm
+			font-size: 22px
+	+max-screen($breakpoint-sm)
+		font-size: 20px
+		&.lg 
+			font-size: 22px
+	&.woocommerce-title
+		font-size: 27px
+		+max-screen($breakpoint-sm)
+			font-size: 20px
+			&.lg 
+				font-size: 22px
+.contentBlock
+	display: flex
+	align-items: center
+	.content-block div
+		letter-spacing: -1px
+		&:not(:last-child)
+			margin-bottom: 3px
+		+max-screen($breakpoint-md)
+			font-size: 15px
+			line-height: calc(1em * 1.5)
+		+max-screen($breakpoint-sm)
+			font-size: 9px
+			line-height: calc(1em * 2)
+	a
+		text-decoration: underline !important
+.text
+	&--center
+		text-align: center
+	&--white
+		color: #fff
+p,a
+	+max-screen(1200px)
+		font-size: 16px
+h2
+	font-weight: 400
+	font-size: 30px
+	line-height: 1
+	padding-bottom: 50px
+	+max-screen($breakpoint-md)
+		font-size: 22px
+		padding-bottom: 0
+		&.md 
+			font-size: 17px
+		&.sm 
+			font-size: 15px
+		&.sm,
+		&.md 
+			p 
+				font-size: 1em
+h3
+	font-weight: 400
+	font-size: 20px
+	line-height: 1
+	padding-bottom: 25px
+	+max-screen($breakpoint-lg)
+		&.lg 
+			font-size: 16px
+h4
+	font-size: 14px
+	font-weight: 400
+	&.sm 
+		font-size: 14px
+	&.desktop-md 
+		font-size: 15px
+	+max-screen($breakpoint-md)
+		font-size: 13px
+		&.sm 
+			font-size: 12px
+		&.lg 
+			font-size: 14px
+			line-height: 1
+h5, .h5
+	font-weight: 400
+	//font-size: 15px
+	font-size: 18px
+	+max-screen($breakpoint-sm)
+		font-size: 10px
+		a, p
+			font-size: inherit 
+
+p
+	&:not(:last-of-type):not(:last-child)
+		padding-bottom: 20px
+	+max-screen($breakpoint-md)
+		font-size: 16px
+	+max-screen($breakpoint-sm)
+		font-size: 10px
+.fw-r 
+	font-weight: 400
+.heading
+	p
+		&:first-child
+			padding-bottom: 50px
+.woocommerce-text
+	font-size: 14px
+	+max-screen($breakpoint-lg)
+		font-size: 12px	
+	+max-screen($breakpoint-md)
+		font-size: 10px
+		p 
+			padding-bottom: 18px
+		& > *
+			font-size: 10px
+		&.lg,
+		&.lg > * 
+			font-size: 12px
+		&.md,
+		&.md > *
+			font-size: 11px
+		&.sm,
+		&.sm > * 
+			font-size: 9px
+		&.xs,
+		&.xs > *
+			font-size: 6px
+		&.lh-sm 
+			line-height: 1.1
+			p 
+				padding-bottom: 10px
+				&:last-child
+					padding-bottom: 0
+		&.italic 
+			font-style italic 
+		ul 
+			padding-left: 18px
+			padding-top: 3px
+			padding-bottom: 4px
+			li
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					left: -6px 
+					width: 3px 
+					height: 3px 
+					background-color: $color-black
+					top: 7px 

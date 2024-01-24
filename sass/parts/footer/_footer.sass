@@ -1,0 +1,161 @@
+.footer
+	background: #EBEBE8
+	.container
+		max-width: 100%
+	&__main
+		padding: 90px 0 40px
+		background: #EBEBE8
+		+max-screen($breakpoint-lg)
+			padding: 60px 0 40px
+		+max-screen($breakpoint-md)
+			padding: 14px 27.5px 0 0
+		&__logo
+			display: block
+			width: 150px
+			max-width: 100%
+			img
+				width: 100%
+				height: auto
+		
+		&__text
+			margin-top: 28px
+
+		&__nav
+			+max-screen($breakpoint-lg)
+				padding-top: 40px
+			+max-screen($breakpoint-md)
+				padding-top: 5px
+			h4
+				text-transform: uppercase
+				font-size: 12px
+				line-height: 1.33
+				font-weight: 400
+				margin-bottom: 13px
+				+max-screen($breakpoint-md)
+					font-size: 9px
+					line-height: 1
+					margin-bottom: 0
+			ul
+				width: 100%
+				display: flex
+				flex-direction: column
+			li
+				font-size: 12px
+				line-height: 1
+				+max-screen($breakpoint-md)
+					font-size: 9px
+				a
+					display: inline-block
+					font-size: 12px
+					line-height: 1.33
+					transition: 0.3s ease-out
+					+max-screen($breakpoint-md)
+						font-size: 9px
+					&:hover
+						color: $color-primary
+				&:not(:last-of-type)
+					margin-bottom: 16px
+
+		&__social
+			&__list
+				display: flex
+				gap: 0 44px
+				+max-screen($breakpoint-lg)
+					gap: 0 14px
+				li
+					a
+						font-size: 12px
+						text-decoration: underline
+						+max-screen($breakpoint-lg)
+							display: block
+							height: 10px
+							font-size: 0
+							text-decoration: none
+						img
+							width: auto
+							height: 100%
+		&__newsletter
+			max-width: 400px
+			+max-screen($breakpoint-lg)
+				max-width: unset
+				padding-top: 40px
+			+max-screen($breakpoint-md)
+				padding-top: 5px
+			p
+				font-size: 12px
+				line-height: 1.5
+				padding-bottom: 15px !important
+				+max-screen($breakpoint-md)
+					font-size: 9px
+					line-height: 1.11
+					padding-bottom: 5px !important
+				strong
+					+max-screen($breakpoint-md)
+						font-weight: 400
+				br
+					+max-screen($breakpoint-lg)
+						display: none
+			.nf-form-cont
+				padding-bottom: 7px
+				+max-screen($breakpoint-md)
+					padding-bottom: 0
+	//&__menu__title
+	//	text-transform: uppercase
+	//	font-size: 12px
+	//	margin-bottom: 13px
+	//	+max-screen($breakpoint-md)
+	//		margin-bottom: 5px
+	//		font-size: 9px
+	//		a
+	//			font-size: 12px
+	//			+max-screen($breakpoint-md)
+	//				font-size: 9px
+	&__bottom
+		padding: 37px 0 30px
+		+max-screen($breakpoint-md)
+			padding: 17px 0 13px
+		&__wrapper
+			text-align: center
+		&__inner
+			display: flex
+			justify-content: space-between
+			//flex-direction: column
+		&__copyright
+			font-size: 13px
+			+max-screen($breakpoint-md)
+				font-size: 9px
+				line-height: 1
+
+
++max-screen($breakpoint-md)
+	.footer__menu__title
+		position: relative
+		width: fit-content
+		padding-right: calc(8.5px + 7.223px)
+		&::before
+			content: " "
+			position: absolute
+			width: 7.223px
+			height: 3.707px
+			
+			background-image: url('../assets/images/dropdown_arrow.svg')
+			background-size: cover
+			background-position: center
+			background-repeat: no-repeat
+
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+			transform-origin: center
+			transition: 0.3s
+			.footer-active &
+				transform: rotate(-180deg) translateY(50%)
+			
+	.footer-nav
+		+max-screen($breakpoint-md)
+			max-height: 0px
+			overflow: hidden
+			transition: max-height 0.6s linear 0.3s
+			.footer-active &
+				max-height: 90px
+				transition: max-height 0.6s ease-out 0s
