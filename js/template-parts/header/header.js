@@ -9,6 +9,8 @@ function header() {
         if (headerToggle) {
             $('body').addClass('header-unactive').removeClass('header-active');
             headerToggle = !headerToggle;
+            $('header .sub-menu').slideUp();
+            $('.menu-item-has-children').removeClass('menu-active');
         } else {
             $('body').addClass('header-active').removeClass('header-unactive');
             headerToggle = !headerToggle;
@@ -23,6 +25,7 @@ function header() {
 
         menuItem.toggleClass('menu-active');
 
+        // subMenu.stop().slideToggle();
         if (menuItem.hasClass('menu-active')) {
             if ($(window).width() > 991) {
                 subMenu.css('height', subMenu[0].scrollHeight + 28 + 'px'); // 28 it's paddings
