@@ -9,7 +9,6 @@ function footer(){
         let dropdown = $(this).find('.footer-nav');
         title.click(function(){
             block.toggleClass('footer-active');
-            dropdown.slideToggle(300);
         });
     });
     
