@@ -19,9 +19,7 @@ function theme_setup(){
 	//main menu
 	register_nav_menus(
 		array( 
-			'main-menu-mobile' => __( 'Main Menu mobile', 'ibrigu' ),
-			'main-menu-desktop-left' => __( 'Main Menu desktop left', 'ibrigu' ),
-			'main-menu-desktop-right' => __( 'Main Menu desktop right', 'ibrigu' ),
+			'main-menu' => __( 'Main Menu', 'ibrigu' ),
 			'footer-menu-1' => __( 'Footer Menu 1', 'ibrigu'),
 			'footer-menu-2' => __( 'Footer Menu 2', 'ibrigu'),
 			'footer-menu-3' => __( 'Footer Menu 3', 'ibrigu'),
